@@ -9,13 +9,14 @@ let config = {
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: { y: 100*3 },
-            debug: true,
+            gravity: { y: 100*3},
+            debug: false,
         }
     },
     scene: [
         new Ui(),
 
+        new Tableau00A("JCVD"),
         new Tableau00("Des étoiles"),
         new Tableau01("Des plateformes"),
         new Tableau02("Plein d'étoiles"),
