@@ -1,2 +1,1 @@
-http://localhost/platformer/
 Ou 
