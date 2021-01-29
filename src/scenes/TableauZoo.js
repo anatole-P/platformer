@@ -8,7 +8,7 @@ class TableauZoo extends Tableau{
         this.load.image('creeper', 'assets/creeper.png');
         this.load.image('egg', 'assets/oeuf.png');
         this.load.image('aigle', 'assets/Pygargue.png');
-        this.load.image('platformee','assets/platform2.png');
+        this.load.image('plat','assets/platform2.png');
 
 
     }
@@ -61,7 +61,7 @@ class TableauZoo extends Tableau{
         this.physics.add.overlap(this.player, this.creeper, this.hitSpike, null, this);
 
         //piques ou murs qui écrasent le joueur si il se fait toucher
-        this.monstre=this.physics.add.sprite(50,100,"platformee");
+        this.monstre=this.physics.add.sprite(50,100,"plat");
         this.monstre.setOrigin(0,0);
         this.monstre.setDisplaySize(32,400);
         this.monstre.setCollideWorldBounds(true);
