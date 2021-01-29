@@ -56,7 +56,8 @@ class TableauZoo extends Tableau{
         this.creeper.setDisplaySize(84,100);
         this.creeper.setCollideWorldBounds(true);
         this.creeper.body.allowGravity=true;
-        this.creeper.setBounce(0.5);
+        this.creeper.setBounceX(1);
+        this.creeper.setBounceY(0.5);
         this.creeper.setVelocityX(80);
         this.physics.add.overlap(this.player, this.creeper, this.hitSpike, null, this);
 
