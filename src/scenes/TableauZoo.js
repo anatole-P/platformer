@@ -93,9 +93,14 @@ class TableauZoo extends Tableau{
 
         
         this.physics.add.collider(this.player, groupeVert);//le joueur rebondit sur les plateformes du goupe vert
+        this.physics.add.collider(this.player, groupeVertical);
         this.physics.add.collider(this.monstre, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
         this.physics.add.collider(this.monstre, groupeVertical);
-        this.physics.add.collider(this.player, groupeVertical);
+        this.physics.add.collider(this.creeper, groupeVertical);
+        this.physics.add.collider(this.aigle, groupeVertical);
+        this.physics.add.collider(this.creeper, groupeVert);
+        this.physics.add.collider(this.aigle, groupeVert);
+
     }
 
 }
