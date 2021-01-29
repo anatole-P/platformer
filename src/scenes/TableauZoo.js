@@ -63,11 +63,11 @@ class TableauZoo extends Tableau{
         //piques ou murs qui écrasent le joueur si il se fait toucher
         this.monstre=this.physics.add.sprite(50,100,"plat");
         this.monstre.setOrigin(0,0);
-        this.monstre.setDisplaySize(32,400);
+        this.monstre.setDisplaySize(32,300);
         this.monstre.setCollideWorldBounds(true);
         this.monstre.body.allowGravity=false;
         this.monstre.setBounce(1);
-        this.monstre.setVelocityY(75);
+        this.monstre.setVelocityY(50);
         this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
 
         let groupeVert = this.physics.add.staticGroup();
