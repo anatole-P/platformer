@@ -49,7 +49,7 @@ class TableauZoo extends Tableau{
         this.aigle.setBounce(1);
         this.aigle.setVelocityX(200);
         this.physics.add.overlap(this.player, this.aigle, this.hitSpike, null, this);
-
+  
         //Monstre qui tuera avec animation explosion avec un petit délai
         this.creeper=this.physics.add.sprite(400,100,"creeper");
         this.creeper.setOrigin(0,0);
@@ -62,14 +62,15 @@ class TableauZoo extends Tableau{
         this.physics.add.overlap(this.player, this.creeper, this.hitSpike, null, this);
 
         //piques ou murs qui écrasent le joueur si il se fait toucher
-        this.monstre=this.physics.add.sprite(50,100,"plat");
-        this.monstre.setOrigin(0,0);
-        this.monstre.setDisplaySize(32,300);
-        this.monstre.setCollideWorldBounds(true);
-        this.monstre.body.allowGravity=false;
-        this.monstre.setBounce(1);
-        this.monstre.setVelocityY(50);
-        this.physics.add.overlap(this.player, this.monstre, this.hitSpike, null, this);
+        this.mure=this.physics.add.sprite(50,100,"plat");
+        this.mure.setOrigin(0,0);
+        this.mure.setDisplaySize(32,300);
+        this.mure.setCollideWorldBounds(true);
+        this.mure.body.allowGravity=false;
+        this.mure.setBounce(1);
+        this.mure.setVelocityY(50);
+        this.physics.add.overlap(this.player, this.mure, this.hitSpike, null, this);
+        this.mure.setImmovable(true);
 
         let groupeVert = this.physics.add.staticGroup();
         let groupeVertical = this.physics.add.staticGroup();
@@ -97,10 +98,14 @@ class TableauZoo extends Tableau{
         this.physics.add.collider(this.player, groupeVertical);
         this.physics.add.collider(this.monstre, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
         this.physics.add.collider(this.monstre, groupeVertical);
+        this.physics.add.collider(this.mure, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
+        this.physics.add.collider(this.mure, groupeVertical);
         this.physics.add.collider(this.creeper, groupeVertical);
         this.physics.add.collider(this.aigle, groupeVertical);
         this.physics.add.collider(this.creeper, groupeVert);
         this.physics.add.collider(this.aigle, groupeVert);
+        this.physics.add.collider(this.monstre, groupeVert);//l'étoile1 rebondit sur les plateformes du goupe vert
+        this.physics.add.collider(this.aigle, this.mure);
 
     }
 
