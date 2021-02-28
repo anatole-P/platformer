@@ -8,6 +8,7 @@ class TableauTest extends Tableau{
         this.load.image('2eCouche','assets/2eCouche.png');
         this.load.image('3eCouche','assets/3eCouche.png');
         this.load.image('ciel','assets/ciel.png');
+        this.load.image('sol','assets/sol.png');
     }
     create() {
         super.create();
@@ -35,15 +36,15 @@ class TableauTest extends Tableau{
         this.physics.add.collider(this.player,this.platforms);
 
 
-        this.ciel=this.add.tileSprite(
+        this.sky10=this.add.tileSprite(
             0,
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
             'ciel'
         );
-        this.ciel.setOrigin(0,0);
-        this.ciel.setScrollFactor(1);
+        this.sky10.setOrigin(0,hauteurDuTableau-64);
+        this.sky10.setScrollFactor(1);
 
         this.sky3=this.add.tileSprite(
             0,
