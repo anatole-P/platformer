@@ -62,7 +62,7 @@ class TableauTest extends Tableau{
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
-            '2emeCouche'
+            '2eCouche'
         );
         this.sky2.setScrollFactor(0);
         this.sky2.setOrigin(0,0);
@@ -76,7 +76,7 @@ class TableauTest extends Tableau{
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
-            '3emeCouche'
+            '3eCouche'
         );
         this.sky3.setScrollFactor(0);
         this.sky3.setOrigin(0,0);
