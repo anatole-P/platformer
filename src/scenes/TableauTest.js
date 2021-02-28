@@ -52,7 +52,7 @@ class TableauTest extends Tableau{
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
-            '1ereCouche'
+            'sky-2'
         );
         this.sky.setOrigin(0,0);
         this.sky.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
@@ -78,8 +78,8 @@ class TableauTest extends Tableau{
             this.sys.canvas.height,
             '3emeCouche'
         );
-        this.sky2.setScrollFactor(0);
-        this.sky2.setOrigin(0,0);
+        this.sky3.setScrollFactor(0);
+        this.sky3.setOrigin(0,0);
 
         //fait passer les éléments devant le ciel
         this.platforms.setDepth(10)
