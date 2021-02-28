@@ -10,7 +10,7 @@ class TableauZoo extends Tableau{
         this.load.image('Aigle', 'assets/Pygargue.png');
         this.load.image('Mure','assets/platform2.png');
 
-
+//test
     }
     create() {
         super.create();

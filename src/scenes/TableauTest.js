@@ -1,5 +1,5 @@
 class Tableau08 extends Tableau{
-
+//layers
     preload() {
         super.preload();
         this.load.image('star', 'assets/star.png');
