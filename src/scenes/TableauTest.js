@@ -1,4 +1,4 @@
-class Tableau08 extends Tableau{
+class TableauTest extends Tableau{
 //layers
     preload() {
         super.preload();
