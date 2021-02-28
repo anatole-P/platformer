@@ -45,32 +45,6 @@ class TableauTest extends Tableau{
         this.ciel.setOrigin(0,0);
         this.ciel.setScrollFactor(1);
 
-
-        //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
-        this.sky=this.add.tileSprite(
-            0,
-            0,
-            this.sys.canvas.width,
-            this.sys.canvas.height,
-            '1ereCouche'
-        );
-        this.sky.setOrigin(0,0);
-        this.sky.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
-        //on ajoute une deuxième couche de ciel
-        this.sky2=this.add.tileSprite(
-            0,
-            0,
-            this.sys.canvas.width,
-            this.sys.canvas.height,
-            '2eCouche'
-        );
-        this.sky2.setScrollFactor(0);
-        this.sky2.setOrigin(0,0);
-        //this.sky2.alpha=0.2;
-
-        //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
-
-        //on ajoute une deuxième couche de ciel
         this.sky3=this.add.tileSprite(
             0,
             0,
@@ -85,19 +59,47 @@ class TableauTest extends Tableau{
         this.platforms.setDepth(10)
         this.stars.setDepth(10)
         this.player.setDepth(10)
+
+                //on ajoute une deuxième couche de ciel
+        this.sky2=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            '2eCouche'
+        );
+        this.sky2.setScrollFactor(0);
+        this.sky2.setOrigin(0,0);
+        //this.sky2.alpha=0.2;
+        //on change de ciel, on fait une tileSprite ce qui permet d'avoir une image qui se répète
+        this.sky=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            '1ereCouche'
+        );
+        this.sky.setOrigin(0,0);
+        this.sky.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
+
+
+        //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
+
+        //on ajoute une deuxième couche de ciel
+
     }
 
     update(){
         super.update();
         //le ciel se déplace moins vite que la caméra pour donner un effet paralax
         this.sky.tilePositionX=this.cameras.main.scrollX*0.6;
-        this.sky.tilePositionY=this.cameras.main.scrollY*0.2;
+        //this.sky.tilePositionY=this.cameras.main.scrollY*0.2;
         //le deuxième ciel se déplace moins vite pour accentuer l'effet
         this.sky2.tilePositionX=this.cameras.main.scrollX*0.3+500;
-        this.sky2.tilePositionY=this.cameras.main.scrollY*0.1+30;
+        //this.sky2.tilePositionY=this.cameras.main.scrollY*0.1+30;
 
         this.sky3.tilePositionX=this.cameras.main.scrollX*0.2;
-        this.sky3.tilePositionY=this.cameras.main.scrollY*0.05;
+        //this.sky3.tilePositionY=this.cameras.main.scrollY*0.05;
     }
 
 
