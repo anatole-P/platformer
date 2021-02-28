@@ -94,7 +94,7 @@ class TableauTest extends Tableau{
             this.sys.canvas.height,
             'sol'
         );
-        this.sky.setOrigin(0,hauteurDuTableau-64);
+        this.sky.setOrigin(0,0);
         this.sky.setScrollFactor(0);
     }
 
