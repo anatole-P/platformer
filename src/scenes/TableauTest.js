@@ -94,7 +94,7 @@ class TableauTest extends Tableau{
             this.sys.canvas.height,
             'sol'
         );
-        this.sky.setOrigin(0,0);
+        this.sky.setOrigin(0,hauteurDuTableau-64);
         this.sky.setScrollFactor(0);
     }
 
@@ -109,6 +109,7 @@ class TableauTest extends Tableau{
 
         this.sky3.tilePositionX=this.cameras.main.scrollX*0.2;
         //this.sky3.tilePositionY=this.cameras.main.scrollY*0.05;
+        this.sky99.tilePositionX=this.cameras.main.scrollX*0;
     }
 
 
