@@ -4,7 +4,7 @@ class TableauTest extends Tableau{
         super.preload();
         this.load.image('star', 'assets/star.png');
         this.load.image('ground', 'assets/platform.png');
-        this.load.image('sky-2', 'assets/1ereCouche.png');
+        this.load.image('1ereCouche', 'assets/1ereCouche.png');
         this.load.image('2eCouche','assets/2eCouche.png');
         this.load.image('3eCouche','assets/3eCouche.png');
         this.load.image('ciel','assets/ciel.png');
@@ -52,7 +52,7 @@ class TableauTest extends Tableau{
             0,
             this.sys.canvas.width,
             this.sys.canvas.height,
-            'sky-2'
+            '1ereCouche'
         );
         this.sky.setOrigin(0,0);
         this.sky.setScrollFactor(0);//fait en sorte que le ciel ne suive pas la caméra
