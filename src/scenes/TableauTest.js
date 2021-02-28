@@ -43,7 +43,7 @@ class TableauTest extends Tableau{
             this.sys.canvas.height,
             'ciel'
         );
-        this.sky10.setOrigin(0,hauteurDuTableau-64);
+        this.sky10.setOrigin(0,0);
         this.sky10.setScrollFactor(1);
 
         this.sky3=this.add.tileSprite(
@@ -87,7 +87,15 @@ class TableauTest extends Tableau{
         //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
 
         //on ajoute une deuxième couche de ciel
-
+        this.sky99=this.add.tileSprite(
+            0,
+            0,
+            this.sys.canvas.width,
+            this.sys.canvas.height,
+            'sol'
+        );
+        this.sky.setOrigin(0,0);
+        this.sky.setScrollFactor(0);
     }
 
     update(){
