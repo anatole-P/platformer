@@ -4,7 +4,7 @@ class TableauTest extends Tableau{
         super.preload();
         this.load.image('star', 'assets/star.png');
         this.load.image('ground', 'assets/platform.png');
-        this.load.image('sky-2', 'assets/1ereCouche.jpg');
+        this.load.image('sky-2', 'assets/1ereCouche.png');
         this.load.image('2eCouche','assets/2eCouche.png');
         this.load.image('3eCouche','assets/3eCouche.png');
         this.load.image('ciel','assets/ciel.png');
