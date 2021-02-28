@@ -56,10 +56,7 @@ class TableauTest extends Tableau{
         this.sky3.setScrollFactor(0);
         this.sky3.setOrigin(0,0);
 
-        //fait passer les éléments devant le ciel
-        this.platforms.setDepth(10)
-        this.stars.setDepth(10)
-        this.player.setDepth(10)
+
 
                 //on ajoute une deuxième couche de ciel
         this.sky2=this.add.tileSprite(
@@ -96,6 +93,11 @@ class TableauTest extends Tableau{
         );
         this.sky99.setOrigin(0,hauteurDuTableau-64);
         this.sky99.setScrollFactor(0);
+        
+        //fait passer les éléments devant le ciel
+        this.platforms.setDepth(10)
+        this.stars.setDepth(10)
+        this.player.setDepth(10)
     }
 
     update(){
@@ -106,7 +108,7 @@ class TableauTest extends Tableau{
         //le deuxième ciel se déplace moins vite pour accentuer l'effet
         this.sky2.tilePositionX=this.cameras.main.scrollX*0.3+500;
         //this.sky2.tilePositionY=this.cameras.main.scrollY*0.1+30;
-
+        this.sky10.tilePositionX=this.cameras.main.scrollX*0;
         this.sky3.tilePositionX=this.cameras.main.scrollX*0.2;
         //this.sky3.tilePositionY=this.cameras.main.scrollY*0.05;
         this.sky99.tilePositionX=this.cameras.main.scrollX*0;
