@@ -86,7 +86,7 @@ class TableauTest extends Tableau{
         //on ajoute une deuxième couche de ciel
         this.sky99=this.add.tileSprite(
             0,
-            0,
+            hauteurDuTableau-64,
             this.sys.canvas.width,
             this.sys.canvas.height,
             'sol'
