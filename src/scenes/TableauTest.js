@@ -7,7 +7,7 @@ class TableauTest extends Tableau{
         this.load.image('1ereCouche', 'assets/1ereCouche.png');
         this.load.image('2eCouche','assets/2eCouche.png');
         this.load.image('3eCouche','assets/3eCouche.png');
-        this.load.image('ciel','assets/ciel.png');
+        //this.load.image('ciel','assets/ciel.png');
         this.load.image('sol','assets/sol.png');
     }
     create() {
@@ -36,7 +36,7 @@ class TableauTest extends Tableau{
         this.physics.add.collider(this.player,this.platforms);
 
 
-        this.sky10=this.add.tileSprite(
+        /*this.sky10=this.add.tileSprite(
             0,
             0,
             this.sys.canvas.width,
@@ -44,7 +44,7 @@ class TableauTest extends Tableau{
             'ciel'
         );
         this.sky10.setOrigin(0,0);
-        this.sky10.setScrollFactor(1);
+        this.sky10.setScrollFactor(1);*/
 
         this.sky3=this.add.tileSprite(
             0,
@@ -84,20 +84,23 @@ class TableauTest extends Tableau{
         //this.sky.tileScaleX=this.sky.tileScaleY=0.8;
 
         //on ajoute une deuxième couche de ciel
+
+
         this.sky99=this.add.tileSprite(
             0,
-            0,
+            hauteurDuTableau-220,
             this.sys.canvas.width,
-            this.sys.canvas.height,
+            this.sys.canvas.height*0.16,
             'sol'
         );
-        this.sky99.setOrigin(0,hauteurDuTableau-64);
+        this.sky99.setOrigin(0,0);
         this.sky99.setScrollFactor(0);
         
         //fait passer les éléments devant le ciel
-        this.platforms.setDepth(10)
-        this.stars.setDepth(10)
-        this.player.setDepth(10)
+        this.platforms.setDepth(10);
+        this.stars.setDepth(10);
+        this.player.setDepth(10);
+
     }
 
     update(){
@@ -108,10 +111,10 @@ class TableauTest extends Tableau{
         //le deuxième ciel se déplace moins vite pour accentuer l'effet
         this.sky2.tilePositionX=this.cameras.main.scrollX*0.3+500;
         //this.sky2.tilePositionY=this.cameras.main.scrollY*0.1+30;
-        this.sky10.tilePositionX=this.cameras.main.scrollX*0;
+        //this.sky10.tilePositionX=this.cameras.main.scrollX*0;
         this.sky3.tilePositionX=this.cameras.main.scrollX*0.2;
         //this.sky3.tilePositionY=this.cameras.main.scrollY*0.05;
-        this.sky99.tilePositionX=this.cameras.main.scrollX*0;
+        this.sky99.tilePositionX=this.cameras.main.scrollX;
     }
 
 
