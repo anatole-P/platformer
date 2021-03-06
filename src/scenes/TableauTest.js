@@ -2,6 +2,8 @@ class TableauTest extends Tableau{
 //layers
     preload() {
         super.preload();
+        this.load.image('soldat','assets/soldat.png');
+        this.load.image('helico','assets/helicopter.png');
         this.load.image('star', 'assets/star.png');
         this.load.image('ground', 'assets/platform.png');
         this.load.image('1ereCouche', 'assets/1ereCouche.png');
@@ -101,6 +103,8 @@ class TableauTest extends Tableau{
         this.stars.setDepth(10);
         this.player.setDepth(10);
 
+        this.soldat1 = new Soldat(this,400,300);
+        this.soldat2 = new Soldat(this,100,500);
     }
 
     update(){
