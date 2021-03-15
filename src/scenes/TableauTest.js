@@ -103,8 +103,10 @@ class TableauTest extends Tableau{
         this.stars.setDepth(10);
         this.player.setDepth(10);
 
-        this.soldat1 = new Soldat(this,400,300);
-        this.soldat2 = new Soldat(this,100,500);
+        this.soldat1 = new Soldat(this,600,height-30);
+        this.soldat2 = new Soldat(this,1400,height-64);
+        this.helico1 = new Helicopter(this,500,200);
+        this.helico2 = new Helicopter(this,1300,200);
     }
 
     update(){
@@ -119,6 +121,7 @@ class TableauTest extends Tableau{
         this.sky3.tilePositionX=this.cameras.main.scrollX*0.2;
         //this.sky3.tilePositionY=this.cameras.main.scrollY*0.05;
         this.sky99.tilePositionX=this.cameras.main.scrollX;
+        //this.helico1.rotation = 0.2;
     }
 
 
