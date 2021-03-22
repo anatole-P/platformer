@@ -105,11 +105,8 @@ class TableauTest extends Tableau{
 
         this.soldat1 = new Soldat(this,600,height-30);
         this.soldat2 = new Soldat(this,1400,height-64);
-<<<<<<< Updated upstream
+
         this.helico1 = new Helicopter(this,800,200);
-=======
-        this.helico1 = new Helicopter(this,500,200);
->>>>>>> Stashed changes
         this.helico2 = new Helicopter(this,1300,200);
     }
 
