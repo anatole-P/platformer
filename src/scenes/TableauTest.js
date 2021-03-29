@@ -26,7 +26,7 @@ class TableauTest extends Tableau{
         //quelques étoiles et plateformes qui vont avec
         this.stars=this.physics.add.group();
         this.platforms=this.physics.add.staticGroup();
-        for(let posX=20;posX<largeurDuTableau;posX+=100){
+        for(let posX=20;posX<largeurDuTableau;posX+=200){
             let etoileY=350+Math.sin(posX)*100;
             let star=this.stars.create(posX ,etoileY,"star");
             star.body.allowGravity=false;
