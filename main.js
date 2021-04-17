@@ -10,13 +10,15 @@ let config = {
         default: 'arcade',
         arcade: {
             gravity: { y: 100*3},
-            debug: false,
+            debug: true,
         }
     },
     scene: [
         new Ui(),
 
+
         new TableauTest("triple layers"),
+        new TableauTiled("Test Tilted Towers"),
         new TableauZoo("J'adore les animals"),
         new Tableau00A("JCVD"),
         new Tableau00("Des étoiles"),
