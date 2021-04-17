@@ -8,6 +8,7 @@ class Soldat extends ObjetEnnemi{
      constructor(scene, x, y) {
         super(scene, x, y, "soldat");
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         //pas de gravité
         this.body.allowGravity=true;
         this.setCollideWorldBounds(true);
@@ -50,6 +51,8 @@ class Soldat extends ObjetEnnemi{
 
     }
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
         this.body.allowGravity=true;
 
@@ -63,10 +66,17 @@ class Soldat extends ObjetEnnemi{
     update(){
         if (this.body.velocity.x > 0){
           this.setFlip(false, false);
+<<<<<<< Updated upstream
         }
         else {
           this.setFlip(true, false);
         }
+=======
+        }
+        else {
+          this.setFlip(true, false);
+        }
+>>>>>>> Stashed changes
       }
   
 =======
@@ -110,6 +120,7 @@ class Soldat extends ObjetEnnemi{
                 }
             })
 
+<<<<<<< Updated upstream
     }
 >>>>>>> Stashed changes
 
@@ -129,6 +140,25 @@ class Soldat extends ObjetEnnemi{
     }
 <<<<<<< Updated upstream
 =======
+>>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
+>>>>>>> Stashed changes
+=======
+    }
+
+    start(){
+        this.scene.tweens.add({
+            targets: this,
+            x: {
+                from: this.minX,
+                to:this.maxX,
+                duration: 10*500,
+                ease: 'Sine.easeInOut',
+                yoyo: -1,
+                repeat:-1,
+                flipX:true,
+            },
+        });
+    }
 >>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
 >>>>>>> Stashed changes
 

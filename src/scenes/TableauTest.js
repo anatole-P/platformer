@@ -112,7 +112,10 @@ class TableauTest extends Tableau{
         this.player.setDepth(10);
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
         /*this.araignee1 = new Araignee(this,600,height-30);
         this.araignee2 = new Araignee(this,1400,height-64);
@@ -121,6 +124,9 @@ class TableauTest extends Tableau{
         this.rat1 = new Rat(this,400,height-20);*/
         this.boostB1= new BoostB(this,100,100);
 =======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         this.soldat1 = new Soldat(this,600,height-30);
         this.soldat2 = new Soldat(this,1400,height-64);
@@ -128,6 +134,10 @@ class TableauTest extends Tableau{
         this.helico1 = new Helicopter(this,800,200);
         this.helico2 = new Helicopter(this,1300,200);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
+>>>>>>> Stashed changes
 =======
 >>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
 >>>>>>> Stashed changes
@@ -148,7 +158,10 @@ class TableauTest extends Tableau{
         this.sky99.tilePositionX=this.cameras.main.scrollX;
         //this.helico1.rotation = 0.2;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
         /*this.araignee1.update();
         this.araignee2.update();
@@ -159,6 +172,9 @@ class TableauTest extends Tableau{
         
 =======
 >>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     }
 

@@ -17,11 +17,17 @@ let config = {
         new Ui(),
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 
         new TableauTest("triple layers"),
         new TableauTiled("Test Tilted Towers"),
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
         
@@ -29,6 +35,10 @@ let config = {
         new TableauTiled("Test Tilted Towers"),
         new TableauTiled("Test Tilted Towers"),
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
+>>>>>>> Stashed changes
 =======
 >>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
 >>>>>>> Stashed changes
