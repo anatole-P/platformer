@@ -7,6 +7,7 @@ class Soldat extends ObjetEnnemi{
      */
      constructor(scene, x, y) {
         super(scene, x, y, "soldat");
+<<<<<<< Updated upstream
         //pas de gravité
         this.body.allowGravity=true;
         this.setCollideWorldBounds(true);
@@ -48,6 +49,69 @@ class Soldat extends ObjetEnnemi{
             })
 
     }
+=======
+<<<<<<< HEAD
+        this.body.allowGravity=true;
+
+        this.setDisplaySize(64,64);
+        this.setVelocityX(100);
+        this.setCollideWorldBounds(true);
+        this.setBounce(1,0);
+        
+
+    }
+    update(){
+        if (this.body.velocity.x > 0){
+          this.setFlip(false, false);
+        }
+        else {
+          this.setFlip(true, false);
+        }
+      }
+  
+=======
+        //pas de gravité
+        this.body.allowGravity=true;
+        this.setCollideWorldBounds(true);
+        //gestion de la taille...car attention notre png est très grand (et c'est maaaaal car pas optimisé)
+        this.setDisplaySize(64,64);
+        this.setBounceX(1);
+        //on réduit un peu la zone de hit
+        this.setBodySize(this.body.width,this.body.height);
+        //this.setOffset(150, 250);
+
+        //définir les propriété que l'on va utiliser dans notre animation
+
+        // X
+        this.originalX=x;
+        this.minX=x-200;
+        this.maxX=x+200;
+
+
+
+        // on applique les propriétés du début de l'animation
+        this.x=this.minX;
+        this.alpha=0;
+        let me=this;
+
+        //on fait apparaitre notre objet avec un petit delay, puis on lance l'animation
+        //ceci a pour effet de décaler les animations pour ce même objet
+        scene.tweens.add({
+                targets:this,
+                duration:200,
+                delay:Math.random()*1000,
+                alpha:{
+                    startDelay:Math.random()*5000,
+                    from:0,
+                    to:1,
+                },
+                onComplete: function () {
+                    me.start();
+                }
+            })
+
+    }
+>>>>>>> Stashed changes
 
     start(){
         this.scene.tweens.add({
@@ -63,5 +127,9 @@ class Soldat extends ObjetEnnemi{
             },
         });
     }
+<<<<<<< Updated upstream
+=======
+>>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
+>>>>>>> Stashed changes
 
 }

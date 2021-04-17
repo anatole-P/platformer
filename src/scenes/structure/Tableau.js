@@ -126,13 +126,36 @@ class Tableau extends Phaser.Scene{
    hitMonster(player, monster){
        let me=this;
        if(monster.isDead !== true){ //si notre monstre n'est pas déjà mort
+<<<<<<< Updated upstream
            if(
+=======
+<<<<<<< HEAD
+           if((
+=======
+           if(
+>>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
+>>>>>>> Stashed changes
                // si le player descend
                player.body.velocity.y > 0
                // et si le bas du player est plus haut que le monstre
                && player.getBounds().bottom < monster.getBounds().top+30
 
+<<<<<<< Updated upstream
            ){
+=======
+<<<<<<< HEAD
+               ) || (
+                player.body.velocity.x >= 3000 // pour tuer les monstre quand on leur dash dessus
+            ) || (
+                player.body.velocity.x <= -3000
+            )
+          )
+
+            {
+=======
+           ){
+>>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
+>>>>>>> Stashed changes
                ui.gagne();
                monster.isDead=true; //ok le monstre est mort
                monster.visible=false;

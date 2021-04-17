@@ -4,6 +4,14 @@ class TableauTest extends Tableau{
         super.preload();
         this.load.image('soldat','assets/soldat.png');
         this.load.image('helico','assets/helicopter.png');
+
+        this.load.image('papillon','assets/papillon.png');
+        this.load.image('oeuf','assets/oeuf.png');
+        this.load.image('araignee','assets/araignee.png');
+        this.load.image('rat','assets/rat.png');
+
+        this.load.image('boostB','assets/boostB.png');
+
         this.load.image('star', 'assets/star.png');
         this.load.image('ground', 'assets/platform.png');
         this.load.image('1ereCouche', 'assets/1ereCouche.png');
@@ -103,15 +111,31 @@ class TableauTest extends Tableau{
         this.stars.setDepth(10);
         this.player.setDepth(10);
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        /*this.araignee1 = new Araignee(this,600,height-30);
+        this.araignee2 = new Araignee(this,1400,height-64);
+        this.papillon1 = new Papillon(this,500,200);
+        this.papillon2 = new Papillon(this,1300,100);
+        this.rat1 = new Rat(this,400,height-20);*/
+        this.boostB1= new BoostB(this,100,100);
+=======
+>>>>>>> Stashed changes
         this.soldat1 = new Soldat(this,600,height-30);
         this.soldat2 = new Soldat(this,1400,height-64);
 
         this.helico1 = new Helicopter(this,800,200);
         this.helico2 = new Helicopter(this,1300,200);
+<<<<<<< Updated upstream
+=======
+>>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
+>>>>>>> Stashed changes
     }
 
-    update(){
+    update(time, delta){
         super.update();
+        this.player.powerUp(this, time, delta);
         //le ciel se déplace moins vite que la caméra pour donner un effet paralax
         this.sky.tilePositionX=this.cameras.main.scrollX*0.6;
         //this.sky.tilePositionY=this.cameras.main.scrollY*0.2;
@@ -123,6 +147,19 @@ class TableauTest extends Tableau{
         //this.sky3.tilePositionY=this.cameras.main.scrollY*0.05;
         this.sky99.tilePositionX=this.cameras.main.scrollX;
         //this.helico1.rotation = 0.2;
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+        /*this.araignee1.update();
+        this.araignee2.update();
+        this.papillon1.update();
+        this.papillon2.update();
+        this.rat1.update();*/
+        this.boostB1.update();
+        
+=======
+>>>>>>> a1957ca265673b4a64e398b820e3eeab84c4624f
+>>>>>>> Stashed changes
     }
 
 
