@@ -16,7 +16,6 @@ let config = {
     scene: [
         new Ui(),
 
-
         new TableauTest("triple layers"),
         new TableauTiled("Test Tilted Towers"),
         new TableauZoo("J'adore les animals"),

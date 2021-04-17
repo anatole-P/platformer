@@ -34,7 +34,7 @@ class TableauTest extends Tableau{
         //quelques étoiles et plateformes qui vont avec
         this.stars=this.physics.add.group();
         this.platforms=this.physics.add.staticGroup();
-        for(let posX=20;posX<largeurDuTableau;posX+=100){
+        for(let posX=20;posX<largeurDuTableau;posX+=150){
             let etoileY=350+Math.sin(posX)*100;
             let star=this.stars.create(posX ,etoileY,"star");
             star.body.allowGravity=false;
@@ -111,12 +111,14 @@ class TableauTest extends Tableau{
         this.stars.setDepth(10);
         this.player.setDepth(10);
 
+
         /*this.araignee1 = new Araignee(this,600,height-30);
         this.araignee2 = new Araignee(this,1400,height-64);
         this.papillon1 = new Papillon(this,500,200);
         this.papillon2 = new Papillon(this,1300,100);
         this.rat1 = new Rat(this,400,height-20);*/
         this.boostB1= new BoostB(this,100,100);
+
     }
 
     update(time, delta){
@@ -133,6 +135,7 @@ class TableauTest extends Tableau{
         //this.sky3.tilePositionY=this.cameras.main.scrollY*0.05;
         this.sky99.tilePositionX=this.cameras.main.scrollX;
         //this.helico1.rotation = 0.2;
+
         /*this.araignee1.update();
         this.araignee2.update();
         this.papillon1.update();
@@ -140,6 +143,7 @@ class TableauTest extends Tableau{
         this.rat1.update();*/
         this.boostB1.update();
         
+
     }
 
 
